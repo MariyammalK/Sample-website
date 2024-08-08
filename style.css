@@ -101,7 +101,7 @@ h2{
 }
 
 .text-overlay {
-    position: absolute;
+    position: fixed;
     top: 30%;
     right: 700px; /* Adjust this value to move the text closer or further from the right edge */
     transform: translateY(-50%);
