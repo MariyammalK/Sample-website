@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Background color for the entire page */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    flex: 1;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000016;
+    color: #fff;
+    padding: 10px;
+}
+
+header h1 {
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: lighter;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    text-decoration: none;
+    display: flex; /* Display list items in a row */
+    gap: 15px; /* Space between each link */
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #555555;
+}
+nav ul li {
+    margin: 0;
+    font-size: medium;
+    color: rgb(255, 254, 253);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #000016;
+    color: #fff;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+h2{
+    font-size: medium;
+    font-style: italic;
+    color:rgb(2, 2, 75);
+    text-align: center;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.text-overlay {
+    animation: pulse 1.5s infinite;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 30%;
+    right: 700px; /* Adjust this value to move the text closer or further from the right edge */
+    transform: translateY(-50%);
+    color: rgb(1, 1, 70);
+    padding: 10px;
+    font-size: 1.2em; /* Font size for the text */
+
+}
+
+
+
