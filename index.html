@@ -33,20 +33,27 @@
     </main>
     <footer>
         <p>&copy; 2024 ML Website. All rights reserved.</p>
-        <!-- Add the webchat widget here -->
-        <div id="webchat"></div>
-        <script src="https://cdn.jsdelivr.net/npm/@rasahq/rasa-webchat@1.0.1/lib/index.min.js"></script>
         <script>
-           WebChat.default.init({
-              selector: "#webchat",
-              initPayload: "/get_started",
-              customData: {"language": "en"}, // arbitrary custom data
-              socketUrl: "https://your-rasa-server.com", // Replace with your Rasa server URL
-              socketPath: "/socket.io/",
-              title: "My Bot",
-              subtitle: "Ask me anything",
-           })
-        </script>
+(function () {
+    let e = document.createElement("script"),
+        t = document.head || document.getElementsByTagName("head")[0];
+    (e.src = "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"),
+    (e.async = !0),
+    (e.onload = () => {
+        window.WebChat.default(
+            {
+                initPayload: "/greet",
+                customData: { language: "en" },
+                socketUrl: "http://0.0.0.0:5005",
+                title: "My Bot",
+                subtitle: "Here to help",
+            },
+            null
+        );
+    }),
+    t.insertBefore(e, t.firstChild);
+})();
+</script>
     </footer>
 </body>
 </html>
